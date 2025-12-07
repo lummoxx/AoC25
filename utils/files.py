@@ -9,13 +9,13 @@ def _data_dir() -> Path:
 def test_file(day: int) -> list[str]:
     path = _data_dir() / f'tst{day}.txt'
     with open(path, 'r', encoding='utf-8') as fh:
-        return fh.read().splitlines()
+        return list(map(list, (fh.read().splitlines())))
 
 
 def day_file(day: int) -> list[str]:
     path = _data_dir() / f'{day}.txt'
     with open(path, 'r', encoding='utf-8') as fh:
-        return fh.read().splitlines()
+        return list(map(list, (fh.read().splitlines())))
 
 def str_test(day: int) -> list[str]:
     path = _data_dir() / f'tst{day}.txt'

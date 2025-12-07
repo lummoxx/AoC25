@@ -20,7 +20,7 @@ def solve(grid: list):
                     count += 1
                     to_remove.append((x,y))
     for x, y in to_remove:
-        grid = grid[:x] + [(grid[x][:y] + empty + grid[x][y+1:])] + grid[x+1:]
+        grid[x][y] = empty
     return count, grid
 
 

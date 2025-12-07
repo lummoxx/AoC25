@@ -6,7 +6,7 @@ def solve_part_1(lines):
     current = start
     zeroes = 0
     for l in lines:
-        rotate = int(l[1:])
+        rotate = int("".join(l[1:]))
         if l[0] == 'L':
             current -= rotate
             while current < 0:
@@ -23,7 +23,7 @@ def solve_part_2(lines):
     current = start
     zeroes = 0
     for l in lines:
-        rotate = int(l[1:])
+        rotate = int("".join(l[1:]))
         zeroes += rotate // 100
         rotate = rotate % 100
         if l[0] == 'L':
@@ -45,7 +45,7 @@ def main():
     test_lines = files.test_file(day)
     real_lines = files.day_file(day)
 
-    print(solve_part_2(test_lines))
+    print(solve_part_1(real_lines))
     print(solve_part_2(real_lines))
 
 if __name__ == '__main__':
