@@ -1,5 +1,4 @@
 from collections import defaultdict
-import copy
 from functools import lru_cache
 import sys
 from utils import files

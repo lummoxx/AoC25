@@ -1,4 +1,3 @@
-from functools import lru_cache
 from utils import files
 
 def fits(region, shapes):

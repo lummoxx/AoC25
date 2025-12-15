@@ -1,5 +1,3 @@
-from collections import defaultdict
-from functools import lru_cache
 import itertools
 from utils import files
 import pulp
@@ -32,9 +30,6 @@ def solve(ls):
     print(count_2)
 
 def find_fastest_toggle(s: int, buttons: list) -> int:
-    # if any((s ^ b) == 0 for b in buttons):
-        # return 1
-
     n = len(buttons)
     for count in range(1, n + 1):
         for combo in itertools.combinations(buttons, count):
