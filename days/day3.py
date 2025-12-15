@@ -1,7 +1,4 @@
-import copy
 from utils import files
-from utils import listy
-import string
 
 def remove_first_smallest(ls: list):
     for i in range(0, len(ls) - 1):
@@ -52,7 +49,9 @@ def main():
     day = 3
     test_banks = files.test_file(day)
     real_banks = files.day_file(day)
+    solve1(test_banks)
     solve2(test_banks)
+    solve1(real_banks)
     solve2(real_banks)
 
 
